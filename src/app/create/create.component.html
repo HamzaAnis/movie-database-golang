@@ -1,0 +1,19 @@
+<md-toolbar color="primary">
+    NG2 Movie Database
+    <span class="app-toolbar-filler"></span>
+    <button md-button (click)="save()">Save</button>
+</md-toolbar>
+<div class="app-content">
+    <md-card>
+        <md-card-header>
+            <md-card-title>Bought a new Movie?</md-card-title>
+        </md-card-header>
+        <md-card-content>
+            <md-input placeholder="Name" [(ngModel)]="movie.name"></md-input><br />
+            <md-input placeholder="Genre" [(ngModel)]="movie.genre"></md-input><br />
+            <md-checkbox [checked]="false" [(ngModel)]="movie.formats.digital">Digital Copy</md-checkbox>
+            <md-checkbox [checked]="false" [(ngModel)]="movie.formats.bluray">Blu-Ray</md-checkbox>
+            <md-checkbox [checked]="false" [(ngModel)]="movie.formats.dvd">DVD</md-checkbox>
+        </md-card-content>
+    </md-card>
+</div>

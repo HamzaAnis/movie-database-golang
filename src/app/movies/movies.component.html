@@ -1,0 +1,30 @@
+<md-toolbar color="primary">
+    NG2 Movie Database
+    <span class="app-toolbar-filler"></span>
+    <button md-button (click)="create()">New</button>
+</md-toolbar>
+<div class="app-content">
+    <div>
+        <md-input placeholder="Search" (keyup.enter)="search($event)"></md-input>
+    </div>
+    <table style="width: 100%; margin-top: 10px; border-collapse: collapse">
+        <thead style="text-align: left">
+            <tr>
+                <th>Title</th>
+                <th>Genre</th>
+                <th>Digital</th>
+                <th>Blu-Ray</th>
+                <th>DVD</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let movie of movies" style="border-top: 1px solid black">
+                <td>{{ movie.name }}</td>
+                <td>{{ movie.genre }}</td>
+                <td><md-checkbox [disabled]="true" [checked]="movie.formats.digital || false"></md-checkbox></td>
+                <td><md-checkbox [disabled]="true" [checked]="movie.formats.bluray || false"></md-checkbox></td>
+                <td><md-checkbox [disabled]="true" [checked]="movie.formats.dvd || false"></md-checkbox></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

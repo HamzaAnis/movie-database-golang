@@ -1,0 +1,11 @@
+.app-toolbar-filler {
+    flex: 1 1 auto;
+}
+
+th {
+    padding: 10px 0px;
+}
+
+td {
+    padding: 10px 0px;
+}
