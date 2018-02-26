@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
+import 'rxjs/add/operator/map'
+
 
 @Component({
     selector: 'app-movies',

@@ -3,8 +3,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
-import { MaterialModule } from '@angular/material';
-import 'hammerjs';
+
+import { MaterialModule } from './material.module';
+import 'hammerjs';  
 
 import { AvailableRoutes } from './app.routing';
 
@@ -24,7 +25,7 @@ import { CreateComponent } from './create/create.component';
     HttpModule,
     RouterModule,
     RouterModule.forRoot(AvailableRoutes),
-    MaterialModule.forRoot()
+    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
